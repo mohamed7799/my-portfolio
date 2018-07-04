@@ -1,11 +1,14 @@
 /*reset*/
+
 * {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 /*general styling*/
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -16,6 +19,7 @@ ul {
 
 a {
   color: inherit;
+  -webkit-text-decoration-line: none;
   text-decoration-line: none;
 }
 
@@ -24,91 +28,104 @@ a {
 }
 
 /*more specific styling*/
+
 /*---------navbar-------*/
+
 .navbar {
   z-index: 1;
-  background: linear-gradient(to right, #8860d0, #5ab9ea);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   position: fixed;
   width: 100%;
   padding: 0px 50px;
 }
 
-.navbar ul {
-  display: flex;
-  justify-content: space-around;
-}
-
 .navbar-item {
   padding: 25px 20px;
   font-weight: bold;
+  -webkit-transition: all .3s ease;
   transition: all .3s ease;
-  color: #ffebeb;
+  color: #ec984d;
   border-radius: 100px;
+  font-style: normal;
 }
 
 .navbar-item:hover {
-  background-color: #ebebeb;
-  color: #5680e9;
+  color: #c46438;
+}
+
+.left {
+  margin-right: auto;
 }
 
 /*---------navbar--------*/
+
 /*---------header--------*/
+
 header {
-  background: linear-gradient(to right, #8860d0, #5ab9ea);
+  background-image: url("./images/web-design-2906159_1920.jpg");
+  background-size: cover;
+  background-position: center;
   padding: 130px 0px;
+  height: 100vh;
 }
 
 .personal-info {
+  -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
   padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 45%;
   margin: auto;
-}
-
-.personal-info-photo {
-  flex: 1;
-}
-
-.personal-info-photo img {
-  width: 100%;
   height: 100%;
-  border-radius: 50%;
-  border: 2px #5ab9ea solid;
 }
 
 .personal-info-text {
-  flex: 2;
+  text-align: center;
   line-height: 1.6;
   color: #ffebeb;
-  align-self: center;
-  margin-left: 20px;
 }
 
-.personal-info-text h2 {
-  margin-bottom: 15px;
+.personal-info-text h1 {
+  font-size: 4rem;
+}
+
+.personal-info-text p {
+  font-size: 1.5rem;
 }
 
 /*---------about---------*/
+
 #about {
-  padding: 30px;
+  background-color: #e0dddd;
+  padding: 50px 30px;
 }
 
 .about-container {
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
-  width: 50%;
-  color: #5680e9;
+  width: 60%;
   margin: auto;
+  color: #886e6e;
   text-align: center;
 }
 
 .about-container hr {
   margin: 20px auto;
   width: 30%;
-  border-top: .5px solid #5680e9;
+  border-top: .5px solid;
 }
 
 .about-container p {
@@ -117,37 +134,46 @@ header {
 }
 
 /*----------about---------*/
+
 /*----------skills--------*/
+
 #skills {
-  background: linear-gradient(to right, #8860d0, #5ab9ea);
-  padding: 20px;
+  width: 80%;
+  margin: auto;
+  color: #886e6e;
+  text-align: none;
+  padding: 50px 20px;
 }
 
 #skills h2 {
-  color: #ebebeb;
   text-align: center;
 }
 
 #skills hr {
   margin: 20px auto;
   width: 15%;
-  border-top: .5px solid #ebebeb;
+  border-top: .5px solid;
 }
 
 .skills-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
-  width: 80%;
-  color: #ebebeb;
-  margin: auto;
-  text-align: none;
   padding: 30px;
 }
 
 .skills--text {
+  -webkit-box-flex: 3;
+  -ms-flex: 3;
   flex: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 24px;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 
@@ -158,47 +184,58 @@ header {
 .skills--text li {
   font-weight: bold;
   margin: 5px;
-  font-style: italic;
 }
 
 .skills--logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 2;
+  -ms-flex: 2;
   flex: 2;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 
-.skills--logos img {
-  width: 160px;
-  height: 160px;
-}
-
 /*------------skills-----------*/
+
 /*------------projects-----------*/
+
 #projects {
-  padding: 30px 10px;
+  padding: 50px 10px;
   width: 90%;
-  color: #5680e9;
   margin: auto;
+  color: #886e6e;
   text-align: center;
 }
 
 #projects hr {
   margin: 20px auto;
   width: 20%;
-  border-top: .5px solid #5680e9;
+  border-top: .5px solid;
 }
 
 .projects-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   margin: 50px 0px;
 }
 
 .project {
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
   padding: 10px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
 }
 
@@ -212,8 +249,9 @@ header {
 }
 
 /*-------footer-------*/
+
 footer {
-  background: linear-gradient(to right, #8860d0, #5ab9ea);
+  background-color: #979998;
   text-align: center;
   padding: 20px;
 }
@@ -223,14 +261,19 @@ footer p {
 }
 
 .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
   width: 20%;
   margin: 20px auto;
 }
 
 .social-media li {
+  -webkit-transition: all .5s;
   transition: all .5s;
   font-size: 30px;
 }
@@ -240,7 +283,8 @@ footer p {
 }
 
 /*--------media Query-------*/
-@media only screen and (max-width: 850px) {
+
+@media only screen and (max-width: 600px) {
   .navbar {
     display: none;
   }
@@ -251,16 +295,20 @@ footer p {
   .social-media {
     width: 50%;
   }
+  .skills-container {
+    width: 100%;
+    padding: 50px 0px;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
-  .personal-info
-, .skills-container
-, .projects-container {
+  .personal-info, .skills-container, .projects-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
-  .projects-container,
-  .skills-container {
+  .projects-container, .skills-container {
     width: 100%;
   }
   .personal-info {
@@ -274,11 +322,17 @@ footer p {
     margin-bottom: 20px;
   }
   .skills--logos img {
-    width: 30%;
-    height: 30%;
+    width: 80%;
   }
   .skills--text {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
     order: 2;
+    text-align: center;
+  }
+  .skills--text ul {
+    margin: 10px auto;
   }
 }
+
 /*# sourceMappingURL=style.css.map */

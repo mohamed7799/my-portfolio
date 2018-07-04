@@ -7,10 +7,10 @@
 
 //mixins
 
-@mixin container($width,$color,$dir){
+@mixin container($width,$dir){
     width: $width;
-    color: $color;
     margin:auto;
+    color: #886e6e;
     text-align: $dir;
 }
 
@@ -34,81 +34,81 @@ a{
 /*---------navbar-------*/
 .navbar{
     z-index: 1;
-    background:linear-gradient(to right,#8860d0,#5ab9ea);
     display: flex;
     justify-content: space-between;
     position: fixed;
     width: 100%;
     padding: 0px 50px;
-    ul{
-        display: flex;
-    justify-content: space-around;
-    } 
+  
 }
 
 .navbar-item{
     padding: 25px 20px;
     font-weight: bold;
     transition: all .3s ease;
-    color: #ffebeb;
+    color: #ec984d;
     border-radius: 100px;
-    
+    font-style: normal;
     &:hover{
-        background-color: #ebebeb;
-        color: #5680e9;
+        color: #c46438;
     }
+}
+
+.left{
+    margin-right: auto;
 }
 /*---------navbar--------*/
 
 /*---------header--------*/
 header{
-    background:linear-gradient(to right,#8860d0,#5ab9ea);
+    background-image: url("./images/web-design-2906159_1920.jpg");
+    background-size: cover;
+    background-position: center;
     padding: 130px 0px;
+    height: 100vh;
 }
 
 .personal-info{
     animation-duration: 1.5s;
     padding: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     width: 45%;
     margin: auto;
+    height: 100%;
 }
 
-.personal-info-photo{
-    flex: 1;
-    img{
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        border: 2px #5ab9ea solid;
-    }
-}
+
 
 .personal-info-text{
-    flex: 2;
+    text-align: center;
     line-height: 1.6;
     color: #ffebeb;
-    align-self: center;
-    margin-left: 20px;
-    h2{
-        margin-bottom: 15px;
+    h1{
+        font-size: 4rem;
+    }
+    p{
+        font-size: 1.5rem;
     }
 }
+
+
+
 
 /*---------about---------*/
 #about{
-    
-    padding: 30px;
+    background-color: #e0dddd;
+    padding: 50px 30px;
 }
 
 .about-container{
     animation-duration: 2s;
-    @include container(50%,#5680e9,center);
+    @include container(60%,center);
     hr{
         margin: 20px auto;
         width: 30%;
-        border-top: .5px solid #5680e9;
+        border-top: .5px solid ;
     }
     p{
         line-height: 1.6;
@@ -120,25 +120,22 @@ header{
 
 /*----------skills--------*/
 #skills{
-    background:linear-gradient(to right,#8860d0,#5ab9ea);
-    padding: 20px;
+    @include container(80%,none);
+    padding: 50px 20px;
     h2{
-        color: #ebebeb;
         text-align: center;  
     }
     hr{
         margin: 20px auto;
         width: 15%;
-        border-top: .5px solid #ebebeb;
+        border-top: .5px solid ;
     }
 }
 
 .skills-container{
     display: flex;
     justify-content: space-between;
-    @include container(80%,#ebebeb,none);
     padding:30px;
-    
 }
 
 
@@ -153,8 +150,6 @@ header{
     li{
         font-weight: bold;
         margin: 5px;
-        font-style: italic;
-
     }
 }
 
@@ -164,28 +159,25 @@ header{
     justify-content: center;
     align-items: center;
     animation-duration: 2s;
-    img{
-        width: 160px;
-        height: 160px;
-    }
 }
 
 /*------------skills-----------*/
 
 /*------------projects-----------*/
 #projects{
-    padding: 30px 10px;
-    @include container(90%,#5680e9,center);
+    padding: 50px 10px;
+    @include container(90%,center);
     hr{
         margin: 20px auto;
         width: 20%;
-        border-top: .5px solid #5680e9;
+        border-top: .5px solid
     }
 }
 
 .projects-container{
     display: flex;
     flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
     margin: 50px 0px;
 }
 
@@ -205,7 +197,7 @@ header{
 
 /*-------footer-------*/
 footer{
-    background:linear-gradient(to right,#8860d0,#5ab9ea);
+    background-color: #979998;
     text-align: center;
     padding: 20px;
     p{
@@ -230,7 +222,7 @@ footer{
 }
 
 /*--------media Query-------*/
-@media only screen and (max-width: 850px){
+@media only screen and (max-width: 600px){
 .navbar{
     display: none;
 }
@@ -242,6 +234,11 @@ footer{
 }
 .social-media{
     width: 50%;
+}
+
+.skills-container{
+    width: 100%;
+    padding: 50px 0px;
 }
 }
 
@@ -270,13 +267,17 @@ footer{
 .skills--logos{
     margin-bottom: 20px;
     img{
-        width: 30%;
-        height: 30%;
+        width: 80%;
+        
     }
 }
 
 .skills--text{
     order: 2;
+    text-align: center;
+    & ul{
+        margin: 10px auto;
+    }
 }
 
 }
