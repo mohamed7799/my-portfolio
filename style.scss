@@ -1,66 +1,82 @@
 /*reset*/
-*{
+
+* {
     padding: 0;
-    margin:0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 //mixins
-
-@mixin container($width,$dir){
+@mixin container($width, $dir) {
     width: $width;
-    margin:auto;
+    margin: auto;
     color: #886e6e;
     text-align: $dir;
 }
 
 /*general styling*/
-body{
+
+body {
     font-family: Arial, Helvetica, sans-serif;
 }
-ul{
+
+ul {
     list-style: none;
 }
-a{
+
+a {
     color: inherit;
     text-decoration-line: none;
 }
 
-.invisible{
+.invisible {
     visibility: hidden;
 }
 
 /*more specific styling*/
+
+
+
 /*---------navbar-------*/
-.navbar{
-    z-index: 1;
+
+.navbar {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
     position: fixed;
-    width: 100%;
-    padding: 0px 50px;
-  
+    background-color: #9b6d48;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    width: 9%;
 }
 
-.navbar-item{
-    padding: 25px 20px;
+.navbar-item {
+    padding: 25px 1rem;
     font-weight: bold;
     transition: all .3s ease;
-    color: #ec984d;
-    border-radius: 100px;
+    color: #3a1f08;
     font-style: normal;
-    &:hover{
-        color: #c46438;
+    text-align: center;
+    &:hover {
+        background-color: #c46438;
     }
 }
 
-.left{
-    margin-right: auto;
+.link i {
+    font-weight: 900;
+    display: block;
+    text-align: center;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
 }
+
+
 /*---------navbar--------*/
 
 /*---------header--------*/
-header{
+
+header {
     background-image: url("./images/web-design-2906159_1920.jpg");
     background-size: cover;
     background-position: center;
@@ -68,7 +84,7 @@ header{
     height: 100vh;
 }
 
-.personal-info{
+.personal-info {
     animation-duration: 1.5s;
     padding: 20px;
     display: flex;
@@ -79,38 +95,35 @@ header{
     height: 100%;
 }
 
-
-
-.personal-info-text{
+.personal-info-text {
     text-align: center;
     line-height: 1.6;
     color: #ffebeb;
-    h1{
+    h1 {
         font-size: 4rem;
     }
-    p{
+    p {
         font-size: 1.5rem;
     }
 }
 
-
-
-
 /*---------about---------*/
-#about{
+
+#about {
     background-color: #e0dddd;
     padding: 50px 30px;
 }
 
-.about-container{
+.about-container {
     animation-duration: 2s;
-    @include container(60%,center);
-    hr{
+    @include container(60%,
+    center);
+    hr {
         margin: 20px auto;
         width: 30%;
-        border-top: .5px solid ;
+        border-top: .5px solid;
     }
-    p{
+    p {
         line-height: 1.6;
         font-size: 20px;
     }
@@ -119,41 +132,42 @@ header{
 /*----------about---------*/
 
 /*----------skills--------*/
-#skills{
-    @include container(80%,none);
+
+#skills {
+    @include container(80%,
+    none);
     padding: 50px 20px;
-    h2{
-        text-align: center;  
+    h2 {
+        text-align: center;
     }
-    hr{
+    hr {
         margin: 20px auto;
         width: 15%;
-        border-top: .5px solid ;
+        border-top: .5px solid;
     }
 }
 
-.skills-container{
+.skills-container {
     display: flex;
     justify-content: space-between;
-    padding:30px;
+    padding: 30px;
 }
 
-
-.skills--text{
+.skills--text {
     flex: 3;
     display: flex;
     font-size: 24px;
     animation-duration: 2s;
-    ul{
+    ul {
         margin: 10px;
     }
-    li{
-        font-weight: bold;
+    li {
+        color: #5d3c3c;
         margin: 5px;
     }
 }
 
-.skills--logos{
+.skills--logos {
     display: flex;
     flex: 2;
     justify-content: center;
@@ -164,120 +178,116 @@ header{
 /*------------skills-----------*/
 
 /*------------projects-----------*/
-#projects{
+
+#projects {
     padding: 50px 10px;
-    @include container(90%,center);
-    hr{
+    @include container(90%,
+    center);
+    hr {
         margin: 20px auto;
         width: 20%;
         border-top: .5px solid
     }
 }
 
-.projects-container{
+.projects-container {
     display: flex;
     flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     margin: 50px 0px;
 }
 
-.project{
+.project {
     animation-duration: 2s;
     padding: 10px;
     flex: 1;
-    *{
+    * {
         margin-bottom: 10px;
     }
-    img{
+    img {
         width: 400px;
         height: 200px;
     }
 }
 
-
 /*-------footer-------*/
-footer{
+
+footer {
     background-color: #979998;
     text-align: center;
     padding: 20px;
-    p{
+    p {
         font-weight: bold;
     }
 }
 
-.social-media{
+.social-media {
     display: flex;
     animation-duration: 2s;
     justify-content: space-around;
     width: 20%;
     margin: 20px auto;
-    li{
+    li {
         transition: all .5s;
         font-size: 30px;
-        &:hover{
+        &:hover {
             color: #ebebeb;
         }
     }
-    
 }
 
 /*--------media Query-------*/
-@media only screen and (max-width: 600px){
-.navbar{
-    display: none;
-}
-.project{
-    img{
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        display: none;
+    }
+    .project {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .social-media {
+        width: 50%;
+    }
+    .skills-container {
         width: 100%;
-        height: 100%;
-    }
-}
-.social-media{
-    width: 50%;
-}
-
-.skills-container{
-    width: 100%;
-    padding: 50px 0px;
-}
-}
-
-@media only screen and (max-width: 1000px){
-
-.personal-info
-,.skills-container
-,.projects-container{
-    flex-direction: column;
-}
-
-.projects-container,
-.skills-container{
-    width: 100%;
-}
-
-.personal-info{
-    text-align: center;
-    width: 60%;
-}
-
-.about-container{
-    width: 100%;
-}
-
-.skills--logos{
-    margin-bottom: 20px;
-    img{
-        width: 80%;
-        
+        padding: 50px 0px;
     }
 }
 
-.skills--text{
-    order: 2;
-    text-align: center;
-    & ul{
-        margin: 10px auto;
+@media only screen and (max-width: 1000px) {
+    .navbar {
+        display: none;
     }
-}
-
+    .personal-info,
+    .skills-container,
+    .projects-container {
+        flex-direction: column;
+    }
+    .projects-container,
+    .skills-container {
+        width: 100%;
+    }
+    .personal-info {
+        text-align: center;
+        width: 60%;
+    }
+    .about-container {
+        width: 100%;
+    }
+    .skills--logos {
+        margin-bottom: 20px;
+        img {
+            width: 80%;
+        }
+    }
+    .skills--text {
+        order: 2;
+        text-align: center;
+        & ul {
+            margin: 10px auto;
+        }
+    }
 }
