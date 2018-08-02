@@ -28,11 +28,10 @@ a {
   background-color: #9b6d48;
   left: 0;
   bottom: 0;
-  top: 0;
-  width: 9%; }
+  top: 0; }
 
 .navbar-item {
-  padding: 25px 1rem;
+  padding: 25px .5rem;
   font-weight: bold;
   transition: all .3s ease;
   color: #3a1f08;
@@ -227,8 +226,5 @@ footer {
     text-align: center; }
     .skills--text ul {
       margin: 10px auto; } }
-@media only screen and (min-width: 1300px) {
-  .navbar {
-    width: 7%; } }
 
 /*# sourceMappingURL=style.css.map */
