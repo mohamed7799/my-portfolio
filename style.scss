@@ -101,7 +101,7 @@ header {
 .personal-info-social-media {
     display: flex;
     justify-content: space-evenly;
-    width: 40%;
+    width: 30%;
     color: $second-color;
 
     li {
@@ -243,12 +243,23 @@ footer {
 /*--------media Query-------*/
 
 @media only screen and (max-width: 600px) {
+    .personal-info-social-media{
+        width: 70%;
+    }
+
+    .skills-container{
+        width: 55%;
+    }
+
+    #projects{
+        padding: 2rem 0rem;
+    }
     .projects-container {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
     .project img {
-        width: 300px;
+        width: 100%;
     }
 
     .skill {

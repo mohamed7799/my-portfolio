@@ -5,12 +5,12 @@
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /*general styling*/
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #282828;
 }
 
@@ -19,20 +19,20 @@ ul {
 }
 
 h2 {
-  color: #4ccb68;
+  color: #4CCB68;
   text-align: center;
 }
 
 a {
   color: inherit;
   -webkit-text-decoration-line: none;
-  text-decoration-line: none;
+          text-decoration-line: none;
 }
 
 hr {
   width: 10rem;
   margin: 1rem auto;
-  border: 0.5px solid #4ccb68;
+  border: 0.5px solid #4CCB68;
 }
 
 /*more specific styling*/
@@ -47,14 +47,14 @@ header {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: auto;
   height: 100%;
 }
@@ -62,7 +62,7 @@ header {
 .personal-info-pic {
   width: 130px;
   height: 130px;
-  border: 1px solid #4ccb68;
+  border: 1px solid #4CCB68;
   background-image: url("./images/IMG_20190914_161501.jpg");
   background-position: center;
   background-size: cover;
@@ -72,7 +72,7 @@ header {
 .personal-info-text {
   text-align: center;
   line-height: 1.6;
-  color: #d0d0d0;
+  color: #D0D0D0;
 }
 
 .personal-info-text h1 {
@@ -80,7 +80,7 @@ header {
 }
 
 .personal-info-text span {
-  color: #4ccb68;
+  color: #4CCB68;
 }
 
 .personal-info-text p {
@@ -92,10 +92,10 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
-  width: 40%;
-  color: #d0d0d0;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 30%;
+  color: #D0D0D0;
 }
 
 .personal-info-social-media li {
@@ -105,11 +105,11 @@ header {
 }
 
 .personal-info-social-media li:hover {
-  color: #4ccb68;
+  color: #4CCB68;
 }
 
 .personal-info-email {
-  color: #4ccb68;
+  color: #4CCB68;
   font-size: 1.5rem;
   margin: 1rem;
 }
@@ -127,7 +127,7 @@ header {
 }
 
 .about-container h2 {
-  color: #4ccb68;
+  color: #4CCB68;
 }
 
 .about-container p {
@@ -146,8 +146,8 @@ header {
 .skills-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(200px, 1fr)) [auto-fit];
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   width: 70%;
   margin: 3rem auto;
   grid-gap: 3rem;
@@ -155,13 +155,13 @@ header {
 
 .skill {
   font-size: 1.5rem;
-  color: #4ccb68;
+  color: #4CCB68;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   justify-self: center;
 }
 
@@ -170,22 +170,22 @@ header {
 }
 
 .skill p {
-  margin-left: 0.5rem;
+  margin-left: .5rem;
 }
 
 /*------------skills-----------*/
 /*------------projects-----------*/
 #projects {
   padding: 3rem;
-  color: #4ccb68;
+  color: #4CCB68;
   margin: auto;
 }
 
 .projects-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(400px, 1fr)) [auto-fit];
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   margin: 2rem 0rem;
   text-align: center;
 }
@@ -208,20 +208,20 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 60%;
   margin: 2rem auto;
 }
 
 .project-btn div {
   cursor: pointer;
-  padding: 0.5rem 1rem;
+  padding: .5rem 1rem;
   border: 1px solid;
 }
 
 .project-btn div:hover {
-  background-color: #4ccb68;
+  background-color: #4CCB68;
   color: #282828;
 }
 
@@ -229,22 +229,31 @@ header {
 footer {
   text-align: center;
   padding: 1rem;
-  color: #4ccb68;
+  color: #4CCB68;
   background-color: #383535;
 }
 
 /*--------media Query-------*/
 @media only screen and (max-width: 600px) {
+  .personal-info-social-media {
+    width: 70%;
+  }
+  .skills-container {
+    width: 55%;
+  }
+  #projects {
+    padding: 2rem 0rem;
+  }
   .projects-container {
-    -ms-grid-columns: (minmax(300px, 1fr)) [auto-fit];
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
   .project img {
-    width: 300px;
+    width: 100%;
   }
   .skill {
     -ms-grid-column-align: auto;
-    justify-self: auto;
+        justify-self: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
