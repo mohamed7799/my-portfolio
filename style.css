@@ -116,7 +116,7 @@ header {
 
 /*---------about---------*/
 #about {
-  padding: 50px 30px;
+  padding: 1rem;
   background-color: white;
 }
 
@@ -245,8 +245,8 @@ footer {
     padding: 2rem 0rem;
   }
   .projects-container {
-    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
   .project img {
     width: 100%;
